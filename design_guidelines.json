@@ -1,0 +1,96 @@
+{
+  "theme": "Light theme preferred (Warm Sand / Bone White) to convey heritage, daylight, and elegant cleanliness. Dark sections in Deep Olive/Charcoal for contrast. No generic SaaS dark mode.",
+  "typography": {
+    "headings": {
+      "font": "Cormorant Garamond, serif",
+      "weights": ["400", "500", "600", "700"],
+      "usage": "H1, H2, H3, large manifesto numbers, editorial quotes. Must use tight letter spacing (tracking-tight)."
+    },
+    "body": {
+      "font": "Manrope, sans-serif",
+      "weights": ["300", "400", "500"],
+      "usage": "Body text, small labels, UI elements, navigation. Highly legible."
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter leading-[1.1]",
+      "h2": "text-4xl sm:text-5xl tracking-tight leading-[1.2]",
+      "h3": "text-2xl sm:text-3xl",
+      "body": "text-base leading-relaxed text-stone-700",
+      "overline": "uppercase text-xs tracking-[0.2em] font-medium text-stone-500"
+    }
+  },
+  "colors": {
+    "backgrounds": {
+      "primary": "#FDFBF7", 
+      "secondary": "#F4F1EA", 
+      "dark_section": "#222D24"
+    },
+    "text": {
+      "primary": "#1A1C1A", 
+      "secondary": "#4A524C",
+      "inverse": "#FDFBF7"
+    },
+    "accents": {
+      "primary": "#2C4030",
+      "primary_hover": "#1E2B20",
+      "warm_terracotta": "#9C5A47",
+      "border": "#E5E0D8"
+    }
+  },
+  "visual enhancers": {
+    "shadows": "Very subtle, elegant ambient shadows. shadow-[0_8px_30px_rgba(0,0,0,0.04)] for elevated elements, otherwise flat.",
+    "borders": "1px solid #E5E0D8. No heavy borders. Sharp corners or very slightly rounded (rounded-sm) to match architectural heritage.",
+    "textures": "Flat, matte surfaces. No glassmorphism blobs, no purple gradients, no neon.",
+    "radius": "Minimal. Max 2px (rounded-sm) or 0px (rounded-none) for buttons and containers to keep the classic architectural feel."
+  },
+  "component name": {
+    "buttons": "Flat, sharp edges or rounded-sm. bg-[#2C4030] text-white hover:bg-[#1E2B20]. transition-colors duration-200. No heavy shadows.",
+    "inputs": "Shadcn UI Form & Input. bg-white border-[#E5E0D8] focus:ring-[#2C4030]. Sharp corners.",
+    "drawer": "Shadcn Drawer for mobile AI chat and mobile nav. bg-[#FDFBF7].",
+    "accordion": "Shadcn Accordion for FAQ. Minimalist, line separators only, no cards."
+  },
+  "grids": {
+    "bento_strategy": "Tetris Grid (Asymmetrical). grid-cols-1 md:grid-cols-12 gap-8 or gap-12. Large images spanning multiple rows next to tight text blocks.",
+    "spacing": "Generous. py-24 or py-32 for vertical sections. Avoid cramped content."
+  },
+  "layouts": {
+    "hero": "Kinetic masked-reveal hero. Real cleaning photography taking 50-60% width, or full width with bg-black/40 overlay. Line-by-line H1 reveal. Primary Quote CTA.",
+    "navigation": "Sticky, compacting nav. Solid bg-[#FDFBF7] with 1px border-b on scroll. EN | PT language toggle.",
+    "services": "Editorial layout. Overlapping images and text blocks. Not a generic 3-column card grid.",
+    "manifesto": "Numbered chapters (1-4) for 'How It Works'. Massive Serif numbers (text-8xl) pinned or revealed on scroll.",
+    "gallery": "Before/After interactive slider (custom implementation using absolute positioning + drag) + editorial grid of 'Our Work'.",
+    "quote_form": "Multi-step Quote Form using Shadcn primitives. Clean progress indicators. Option to upload photos.",
+    "ai_chat": "Discreet bottom-right trigger. Opens a premium 'Concierge' Drawer/Popover. Humanized avatar, not a robot icon."
+  },
+  "motion": {
+    "scroll": "Lenis smooth scroll is MANDATORY for a premium momentum feel.",
+    "reveal": "Framer Motion staggered fade-ups. Text reveals with overflow-hidden wrappers.",
+    "marquee": "Slow editorial marquee. Use react-fast-marquee. Classic serif font, pale background, dark text."
+  },
+  "accessibility": {
+    "contrast": "Strict APCA/WCAG AA compliance. Ensure text over images has dark gradient overlays (max bg-black/50) or text shadows.",
+    "testing": "All interactive elements, forms, and nav links MUST have data-testid attributes (e.g., data-testid='quote-submit-btn').",
+    "aria": "Use aria-hidden for purely decorative graphics. Full keyboard navigation required."
+  },
+  "media": {
+    "image_urls": {
+      "hero_main": "https://images.unsplash.com/photo-1767050321604-a2654be8fad0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHw0fHxjbGFzc2ljJTIwbHV4dXJ5JTIwaG9tZSUyMGludGVyaW9yfGVufDB8fHx8MTc4NjY2MDI3MHww&ixlib=rb-4.1.0&q=85",
+      "kitchen_clean": "https://images.unsplash.com/photo-1602028915047-37269d1a73f7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxzcG90bGVzcyUyMGx1eHVyeSUyMGtpdGNoZW58ZW58MHx8fHwxNzg2NjYwMjcwfDA&ixlib=rb-4.1.0&q=85",
+      "living_room_clean": "https://images.unsplash.com/photo-1780257562963-3389a4105371?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwyfHxjbGFzc2ljJTIwbHV4dXJ5JTIwaG9tZSUyMGludGVyaW9yfGVufDB8fHx8MTc4NjY2MDI3MHww&ixlib=rb-4.1.0&q=85",
+      "professional_cleaner": "https://images.unsplash.com/photo-1615506355925-dd0a54d099dd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBjbGVhbmVyJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzg2NjYwMjU4fDA&ixlib=rb-4.1.0&q=85",
+      "lisbon_architecture": "https://images.unsplash.com/photo-1731960197617-cc0ad319db47?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxsaXNib24lMjBjbGFzc2ljJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc4NjY2MDI1OHww&ixlib=rb-4.1.0&q=85",
+      "services_residential": "https://images.unsplash.com/photo-1632829882891-5047ccc421bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwyfHxlbGVnYW50JTIwY2xlYW4lMjBsaXZpbmclMjByb29tfGVufDB8fHx8MTc4NjY2MDI1OHww&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "3d libraries and steps": {
+    "decision": "No 3D objects or heavy canvas libraries. Focus on premium 2D interactions to maintain old-school elegance.",
+    "steps": [
+      "Install framer-motion for kinetic typography and scroll reveals.",
+      "Install @studio-freight/lenis for smooth scrolling.",
+      "Install react-fast-marquee for the editorial ribbon.",
+      "Implement simple DOM-based parallax on images using Framer Motion useScroll."
+    ]
+  },
+  "instructions_to_main_agent": "Build a multi-page marketing site architecture (using React Router or similar). Use .js files, NOT .tsx. Implement a custom before/after slider using Framer Motion drag constraints or standard React state. Integrate Shadcn UI components for the quote form, accordion, and drawer, but strictly override their default styles to match the 'classic, sharp, matte' aesthetic defined in these guidelines. Do not use generic icons for the AI chat; style it like a high-end concierge service. Set up i18n placeholders for EN/PT text.",
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": "1. NO generic centered layouts. Asymmetry creates interest. 2. NO AI slop gradients (no purple/blue/neon). Stick to the organic, earthy heritage palette. 3. NEVER apply universal `transition: all` as it breaks Framer Motion transforms. 4. Do not use transparent backgrounds on headers over content; use solid colors. 5. Include `data-testid` on all buttons, forms, and interactive elements. 6. Only use the provided real image URLs; no placeholders. 7. Do not use AI emojis (🤖💡) for icons; use clean Lucide React icons."
+}
